@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-22T14:36:48.933096" rpa="false" schemaversion="5">
+<suite id="s1" name="aluraTeste gherkin bdd" source="C:\Users\andre.menezes\RobotF\WebTeste\aluraTeste_gherkin_bdd.robot">
+<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="11">
+<kw name="abrir o navagador" owner="amazonResources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-22T14:36:49.901257" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<msg time="2024-03-22T14:36:51.894661" level="WARN">The chromedriver version (122.0.6261.111) detected in PATH at C:\Users\andre.menezes\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.58); currently, chromedriver 123.0.6312.58 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-22T14:36:49.901257" elapsed="4.541909"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-22T14:36:54.443166" elapsed="0.137369"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:36:49.900256" elapsed="4.680279"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" owner="amazonResources">
+<kw name="Acessar a home page do site Amazon.com.br" owner="amazonResources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-22T14:36:54.582530" level="INFO">Opening url 'https://www.alura.com.br/'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-22T14:36:54.581533" elapsed="11.630638"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${menuEletronicos}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-22T14:37:06.212171" elapsed="0.055054"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:36:54.581533" elapsed="11.685692"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:36:54.581533" elapsed="11.685692"/>
+</kw>
+<kw name="Quando acessar o menu &quot;Eletrônicos&quot;" owner="amazonResources">
+<kw name="Entrar no menu &quot;Eletrônicos&quot;" owner="amazonResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T14:37:06.269290" level="INFO">Clicking element '//a[contains(@aria-label,'Clique aqui e acesse a página da escola Programação')]'.</msg>
+<arg>${menuEletronicos}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T14:37:06.269290" elapsed="5.637816"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:37:06.268518" elapsed="5.638588"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:37:06.268518" elapsed="5.639605"/>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" owner="amazonResources">
+<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" owner="amazonResources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${textoHeader}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-22T14:37:11.909891" elapsed="0.021041"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:37:11.908123" elapsed="0.022809"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:37:11.908123" elapsed="0.022809"/>
+</kw>
+<kw name="E o texto &quot;Eletrônicos e Tecnologia&quot; deve ser exibido na página" owner="amazonResources">
+<kw name="Verificar se aparece a categoria &quot;Começando&quot;" owner="amazonResources" source_name="Verificar se aparece a categoria &quot;${Categoria}&quot;">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-22T14:37:11.964188" level="INFO">Element '//h4[@class='school-title--card'][contains(.,'Começando')]' is displayed.</msg>
+<arg>//h4[@class='school-title--card'][contains(.,'${Categoria}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-22T14:37:11.932252" elapsed="0.031936"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:37:11.932252" elapsed="0.031936"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:37:11.932252" elapsed="0.031936"/>
+</kw>
+<kw name="fechar o navegador" owner="amazonResources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-22T14:37:12.150472" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-03-22T14:37:11.965481" elapsed="0.184991"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-22T14:37:12.150472" elapsed="3.675371"/>
+</kw>
+<status status="PASS" start="2024-03-22T14:37:11.965481" elapsed="3.861360"/>
+</kw>
+<doc>Esse teste verifica o menu eletronicos do site
+e verifica a categoria Computadores e Informática.</doc>
+<tag>Alura</tag>
+<tag>menus</tag>
+<status status="PASS" start="2024-03-22T14:36:49.899662" elapsed="25.927705"/>
+</test>
+<doc>Suite para testar site da Alura.</doc>
+<status status="PASS" start="2024-03-22T14:36:48.944068" elapsed="26.886680"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Alura</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="aluraTeste gherkin bdd">aluraTeste gherkin bdd</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-22T14:36:51.894661" level="WARN">The chromedriver version (122.0.6261.111) detected in PATH at C:\Users\andre.menezes\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.58); currently, chromedriver 123.0.6312.58 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
